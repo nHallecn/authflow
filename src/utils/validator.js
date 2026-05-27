@@ -25,12 +25,3 @@
   if (typeof password !== 'string' || typeof confirmPassword !== 'string') return false;
   return password === confirmPassword && password.length > 0;
 }
-
- export function validateRegistrationFields({ email, password, username, confirmPassword }) {
-  return {
-    email: validateEmail(email),
-    password: validatePassword(password),
-    username: validateUsername(username),
-    confirmPassword: validateConfirmPassword(password, confirmPassword),
-  };
-}
